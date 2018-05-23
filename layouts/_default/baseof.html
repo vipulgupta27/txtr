@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <title>txtr: A clean and minimal theme for Hugo with AMP support</title>
+  <meta name="if:Wide Images" content="1" />
+  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+  <link type="text/css" rel="stylesheet" href="{{ "css/normalize.css" | absURL }}" />
+  <link type="text/css" rel="stylesheet" href="{{ "css/animate.css" | absURL }}"  />
+  <link type="text/css" rel="stylesheet" href="{{ "css/style.css" | absURL }}"  />
+  <link rel="shortcut icon" href="http://static.tumblr.com/qvynfbc/PoTn1xo95/favicon.png">
+  <!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+  <!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+  <!-- Read more: http://ogp.me/ -->
+  <meta property="fb:app_id" content="48119224995" />
+  <meta property="og:title" content="Minimal Alternative" />
+  <meta property="og:url" content="http://blog.mnmalt.com/?og=1" />
+  <meta property="og:description" content="Personal blog of designer Aleksandar Djuric" />
+  <meta property="og:type" content="tumblr-feed:tumblelog" />
+  <meta property="og:image" content="https://78.media.tumblr.com/avatar_f4deed00a803_128.pnj" />
+  <!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+  <!-- TWITTER TAGS -->
+  <meta charset="utf-8">
+  <meta name="twitter:site" content="tumblr" />
+  <meta name="twitter:card" content="app" />
+  <meta name="twitter:description" content="minimalternative" />
+  <meta name="twitter:title" content="minimalternative" />
+  <meta name="twitter:app:name:iphone" content="Tumblr" />
+  <meta name="twitter:app:name:ipad" content="Tumblr" />
+  <meta name="twitter:app:name:googleplay" content="Tumblr" />
+  <meta name="twitter:app:id:iphone" content="305343404" />
+  <meta name="twitter:app:id:ipad" content="305343404" />
+  <meta name="twitter:app:id:googleplay" content="com.tumblr" />
+  <meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=minimalternative&amp;referrer=twitter-cards" />
+  <meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=minimalternative&amp;referrer=twitter-cards" />
+  <meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=minimalternative&amp;referrer=twitter-cards" />
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link href="https://fonts.googleapis.com/css?family=Amiri|Kaushan+Script|Lato:400" rel="stylesheet">
+</head>
+
+<body class="animated fadeIn">
+  <header class="blog-header">
+    <div class="container">
+      <h1 class="logo">
+    	   <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+			</h1>
+      <nav>
+        {{ range .Site.Menus.page }}
+          <a href='{{.URL}}' title="{{ .Name }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      {{ block "content" . }}{{ end }}
+    </main>
+  </div>
+
+  <footer class="blog-footer">
+    <div class="about-layout">
+      <p class="about">My name is Barry Allen. Dr. Harrison taught me how to control my superpowers at <a href="https://en.wikipedia.org/wiki/S.T.A.R._Labs">S.T.A.R. Labs</a>.</p>
+    </div>
+    <p class="copy"> Copyright &copy; 2019</p>
+  </footer>
+</body>
+</html>
