@@ -20,6 +20,10 @@ p, blockquote, ul,
 	font-family: 'Amiri', serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	color: #4a525f;
+}
+
 h2, h3, time, .tweet {
 	font-family: 'Lato', sans-serif;
 }
@@ -107,8 +111,12 @@ header nav a {
 	margin: 140px 0 0 0;
 }
 
+section#main {
+	margin-top: 120px;
+}
+
 article {
-	margin: 120px 0 40px 0;
+	margin: 0 0 40px 0;
 	/* border-bottom: 1px solid rgba(74, 82, 95, 0.1); */
 }
 
